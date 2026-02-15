@@ -248,6 +248,10 @@ main {
     color: var(--blanco);
 }
 
+/* ===========================
+   Media Queries - Desktop First
+   =========================== */
+
 @media (max-width: 1024px) {
     :root {
         --tamanio-h1: 42px;
