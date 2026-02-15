@@ -248,10 +248,6 @@ main {
     color: var(--blanco);
 }
 
-/* ===========================
-   Media Queries Mejoradas - Desktop First
-   =========================== */
-
 @media (max-width: 1024px) {
     :root {
         --tamanio-h1: 42px;
@@ -483,7 +479,6 @@ main {
     }
 }
 
-/* Pantallas muy pequeñas */
 @media (max-width: 360px) {
     main {
         padding: 24px 12px;
