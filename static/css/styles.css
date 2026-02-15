@@ -1,0 +1,446 @@
+/* ===========================
+   Variables CSS
+   =========================== */
+:root {
+    --color-verde-claro: #a5d748;
+    --color-rosa: #e91e63;
+    --color-titulo: #4a5568;
+    --color-texto: #a0aec0;
+    --color-boton-inactivo: #718096;
+    --blanco: #ffffff;
+    --fondo-gris: #f5f5f5;
+    --borde-claro: #e2e8f0;
+    
+    --fuente-titulo: 'Baloo 2', sans-serif;
+    --fuente-base: Arial, sans-serif;
+    
+    --tamanio-h1: 48px;
+    --tamanio-h2: 36px;
+    --tamanio-texto: 16px;
+    --tamanio-pequeno: 14px;
+    
+    --espaciado-xs: 8px;
+    --espaciado-sm: 16px;
+    --espaciado-md: 24px;
+    --espaciado-lg: 32px;
+    --espaciado-xl: 48px;
+    --espaciado-xxl: 64px;
+}
+
+/* ===========================
+   Reset
+   =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-base);
+    font-size: var(--tamanio-texto);
+    line-height: 1.6;
+    color: var(--color-titulo);
+    background-color: var(--fondo-gris);
+}
+
+img {
+    width: 400px;
+    height: auto;
+    display: block;
+}
+
+/* ===========================
+   Layout Principal
+   =========================== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* ===========================
+   Sección del Menú
+   =========================== */
+.seccion-menu {
+    margin-bottom: 80px;
+}
+
+.encabezado-menu {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.encabezado-menu h1 {
+    font-family: var(--fuente-titulo);
+    font-size: var(--tamanio-h1);
+    font-weight: 700;
+    color: var(--color-titulo);
+    margin-bottom: 20px;
+}
+
+.encabezado-menu p {
+    font-size: var(--tamanio-texto);
+    color: var(--color-texto);
+    line-height: 1.8;
+}
+
+/* ===========================
+   Filtros del Menú
+   =========================== */
+.filtro-menu {
+    display: flex;
+    justify-content: center;
+    gap: var(--espaciado-sm);
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.boton-filtro {
+    padding: 12px 28px;
+    border: 1px solid var(--borde-claro);
+    background-color: var(--blanco);
+    color: var(--color-boton-inactivo);
+    font-family: var(--fuente-base);
+    font-size: var(--tamanio-texto);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.boton-filtro.active {
+    background-color: var(--color-verde-claro);
+    color: var(--blanco);
+    border-color: var(--color-verde-claro);
+}
+
+/* ===========================
+   Grid del Menú (Grid CSS)
+   =========================== */
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+}
+
+.item-menu {
+    overflow: hidden;
+}
+
+.item-menu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===========================
+   Secciones Destacadas (Flexbox)
+   =========================== */
+.seccion-destacada {
+    margin-bottom: 80px;
+}
+
+.item-destacado {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+/* ===========================
+   Imagen con Fecha
+   =========================== */
+.imagen-destacada {
+    position: relative;
+    flex: 0 0 420px;
+}
+
+.imagen-destacada img {
+    width: 500px;
+    height: 400px;
+    display: block;
+}
+
+.insignia-fecha {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: var(--blanco);
+    padding: 16px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.dia {
+    font-weight: bold;
+}
+
+.mes {
+    font-weight: bold;
+}
+
+.anio {
+    font-weight: bold;
+}
+
+/* ===========================
+   Contenido de Texto
+   =========================== */
+.full-of-spices {
+    flex: 1;
+    padding: var(--espaciado-md);
+    text-align: right;
+}
+
+.full-of-spices h2 {
+    font-family: var(--fuente-titulo);
+    font-size: var(--tamanio-h2);
+    font-weight: 700;
+    color: var(--color-titulo);
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.full-of-spices p {
+    font-size: var(--tamanio-texto);
+    color: var(--color-texto);
+    line-height: 1.8;
+    margin-bottom: 32px;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.full-of-spices .boton {
+    align-self: flex-end;
+}
+
+.midnight-deals {
+    flex: 1;
+    padding: var(--espaciado-md);
+}
+
+.midnight-deals h2 {
+    font-family: var(--fuente-titulo);
+    font-size: var(--tamanio-h2);
+    font-weight: 700;
+    color: var(--color-titulo);
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.midnight-deals p {
+    font-size: var(--tamanio-texto);
+    color: var(--color-texto);
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+/* Primera sección: contenido a la derecha */
+.seccion-destacada:first-of-type .full-of-spices {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Segunda sección: contenido a la izquierda */
+.seccion-destacada.invertida .midnight-deals {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* ===========================
+   Botones
+   =========================== */
+.boton {
+    display: inline-block;
+    padding: 14px 36px;
+    font-family: var(--fuente-base);
+    font-size: var(--tamanio-pequeno);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.boton-primario {
+    background-color: var(--color-verde-claro);
+    color: var(--blanco);
+}
+
+.boton-secundario {
+    background-color: var(--color-rosa);
+    color: var(--blanco);
+}
+
+/* ===========================
+   Media Queries - Desktop First
+   =========================== */
+
+/* Tablets grandes */
+@media (max-width: 1024px) {
+    :root {
+        --tamanio-h1: 42px;
+        --tamanio-h2: 32px;
+    }
+    
+    main {
+        padding: 60px 20px;
+    }
+    
+    .grid-menu {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1px;
+    }
+    
+    .item-destacado {
+        gap: 50px;
+    }
+    
+    .imagen-destacada {
+        flex: 0 0 350px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    :root {
+        --tamanio-h1: 36px;
+        --tamanio-h2: 28px;
+        --tamanio-texto: 15px;
+    }
+    
+    main {
+        padding: 40px 16px;
+    }
+    
+    .encabezado-menu {
+        margin-bottom: 40px;
+    }
+    
+    .encabezado-menu h1 {
+        margin-bottom: 16px;
+    }
+    
+    .filtro-menu {
+        gap: 12px;
+        margin-bottom: 40px;
+    }
+    
+    .boton-filtro {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    
+    .grid-menu {
+        margin-bottom: 60px;
+    }
+    
+    .seccion-destacada {
+        margin-bottom: 60px;
+    }
+    
+    .item-destacado {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .imagen-destacada {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+    
+    .seccion-destacada:first-of-type .full-of-spices {
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    .full-of-spices {
+        padding: var(--espaciado-sm);
+    }
+    
+    .full-of-spices h2 {
+        margin-bottom: 16px;
+    }
+    
+    .full-of-spices p {
+        margin-bottom: 24px;
+    }
+    
+    .midnight-deals {
+        padding: var(--espaciado-sm);
+    }
+    
+    .midnight-deals h2 {
+        margin-bottom: 16px;
+    }
+    
+    .midnight-deals p {
+        margin-bottom: 24px;
+    }
+    
+    .insignia-fecha {
+        padding: 12px 16px;
+    }
+    
+    .dia {
+        font-size: 24px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    :root {
+        --tamanio-h1: 28px;
+        --tamanio-h2: 24px;
+        --tamanio-texto: 14px;
+    }
+    
+    main {
+        padding: 32px 16px;
+    }
+    
+    .encabezado-menu {
+        margin-bottom: 32px;
+    }
+    
+    .filtro-menu {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    
+    .boton-filtro {
+        width: 100%;
+        padding: 12px;
+    }
+    
+    .grid-menu {
+        grid-template-columns: 1fr;
+        margin-bottom: 40px;
+    }
+    
+    .seccion-destacada {
+        margin-bottom: 40px;
+    }
+    
+    .full-of-spices h2 {
+        font-size: 24px;
+    }
+    
+    .midnight-deals h2 {
+        font-size: 24px;
+    }
+    
+    .boton {
+        width: 100%;
+        text-align: center;
+        padding: 12px 28px;
+        font-size: 12px;
+    }
+}
